@@ -66,10 +66,31 @@ console.log(createUser());
 
 const arr1 = [1, 2, 3];
 const arr2 = [4, 5, 6];
-const arr = [...arr1, ...arr2];
-console.log(arr);
-const copy = [...arr1];
-console.log(copy);
+const arr3 = [7, 8, 9];
+const mergeArray = [...arr1, ...arr2, ...arr3];
+console.log(mergeArray);
 
-const arr3 = [0, ...arr1, ...arr2, 7];
-console.log(arr3);
+
+const sumAll = (...numbers) => {
+    return numbers.reduce((acc, curr) => acc + curr, 0);
+}
+console.log(sumAll(10, 1, 10, 1, 10));
+
+const createProduct = (thongtin) => {
+    const macdinh = {
+        name: "No name",
+        price: 0,
+        color: "default",
+    }
+
+    return { ...macdinh, ...thongtin };
+};
+const productDetails = {
+    name: "Iphone 17 Pro Max",
+    price: 5000,
+    color: "Silver",
+};
+
+const newProduct = (createProduct(productDetails));
+
+console.log(newProduct);
