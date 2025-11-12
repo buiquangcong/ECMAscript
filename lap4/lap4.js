@@ -30,38 +30,61 @@ console.log(name, price, brandName);
 
 //Bài 3
 
-
-
-const apiUrl = 'https://jsonplaceholder.typicode.com/users';
-
-console.log('Bắt đầu tải dữ liệu...');
-
-fetch(apiUrl)
-    .then(response => {
-        if (!response.ok) {
-
-            throw new Error(`Lỗi HTTP! Trạng thái: ${response.status}`);
-        }
-
-        return response.json();
-    })
-    .then(users => {
-
-        console.log('✅ Tải dữ liệu thành công!');
-        console.log('Danh sách Users:', users);
-
-        if (users.length > 0) {
-            console.log(`User đầu tiên: ${users[0].name}`);
-        }
-    })
-    .catch(error => {
-        console.error('❌ Không thể tải dữ liệu:', error.message);
-    })
-    .finally(() => {
-        console.log('--- Thao tác fetch đã hoàn tất ---');
+function delay(ms) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve();
+        }, ms);
     });
+}
 
-console.log('...ok');
+console.log('Bắt tải thông tin...');
+
+delay(1500).then(() => {
+    console.log('✅ Tải thông tin thành công!');
+}).catch((err) => {
+    console.error('❌ Tải thông tin thất bại:', err);
+}).finally(() => {
+    console.log('--- Hoàn tất quá trình tải thông tin ---');
+});
+
+console.log('Đang tải thông tin...');
+
+
+
+
+
+
+// const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+
+// console.log('Bắt đầu tải dữ liệu...');
+
+// fetch(apiUrl)
+//     .then(response => {
+//         if (!response.ok) {
+
+//             throw new Error(`Lỗi HTTP! Trạng thái: ${response.status}`);
+//         }
+
+//         return response.json();
+//     })
+//     .then(users => {
+
+//         console.log('✅ Tải dữ liệu thành công!');
+//         console.log('Danh sách Users:', users);
+
+//         if (users.length > 0) {
+//             console.log(`User đầu tiên: ${users[0].name}`);
+//         }
+//     })
+//     .catch(error => {
+//         console.error('❌ Không thể tải dữ liệu:', error.message);
+//     })
+//     .finally(() => {
+//         console.log('--- Thao tác fetch đã hoàn tất ---');
+//     });
+
+// console.log('...ok');
 
 
 
