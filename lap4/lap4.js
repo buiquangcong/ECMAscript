@@ -50,8 +50,21 @@ delay(1500).then(() => {
 
 console.log('Đang tải thông tin...');
 
+//Bài 4
 
 
+async function processOrderAsync(orderId) {
+    try {
+        const order = await getOrderAsync(orderId);
+        const user = await getUserAsync(order.userId);
+        const products = await getProductsAsync(order.productIds);
+        return { order, user, products };
+
+    } catch (error) {
+        console.error(`Không thể xử lý đơn hàng ${orderId}:`, error);
+        return null;
+    }
+}
 
 
 
