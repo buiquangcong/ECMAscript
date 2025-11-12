@@ -1,8 +1,15 @@
 //Bài 1
-const number = [10, 20, 30, 40, 50];
+function getFirstLast(array) {
+    if (!Array.isArray(array)) {
+        throw new TypeError("Dữ liệu đầu vào không phải là một mảng (array).");
+    }
+    const first = array[0];
+    const last = array[array.length - 1];
 
-const [dau, hai, ...conlai] = number;
-console.log(dau, hai);
+    return [first, last];
+}
+
+console.log(getFirstLast([1, 2, 3, 4]));
 
 
 //Bài 2
