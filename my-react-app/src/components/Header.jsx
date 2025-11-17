@@ -13,7 +13,7 @@ export default function Header() {
                             <a href="/">Home</a>
                         </li>
                         <li className="hover:text-blue-600 transition">
-                            <a href="/">About</a>
+                            <a href="/about">About</a>
                         </li>
                         <li className="hover:text-blue-600 transition">
                             <a href="/">Booking</a>
