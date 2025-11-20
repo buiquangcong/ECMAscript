@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import TourCard from '../components/TourCard'
 import Button from '../components/Button'
 import Heading from '../components/Heading'
+import Text from '../components/Text'
 function Home() {
     // mock data
     const tours = [

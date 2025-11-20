@@ -4,7 +4,8 @@ function Navigation() {
     return (
         <nav>
             <Link to="/">Home</Link>
-            <NavLink to="/about">About</NavLink> {/* Tự động highlight khi trang active */}
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/booking">Booking</NavLink>
         </nav>
     );
 }

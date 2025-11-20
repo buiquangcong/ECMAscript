@@ -16,7 +16,7 @@ export default function Header() {
                             <a href="/about">About</a>
                         </li>
                         <li className="hover:text-blue-600 transition">
-                            <a href="/">Booking</a>
+                            <a href="/booking">Booking</a>
                         </li>
                         <li className="hover:text-blue-600 transition">
                             <a href="/">Contact</a>
